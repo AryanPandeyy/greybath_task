@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION["isUser"])) {
-       header("Location: login.php");    
+if (!isset($_SESSION["isUser"])) {
+  header("Location: login.php");
 }
 ?>
 <html lang="en">
@@ -13,8 +13,8 @@ if(!isset($_SESSION["isUser"])) {
 </head>
 
 <body>
-    <a href="profile.php">Profile</a>
-     <a href="logout.php">LogOut</a>
+  <a href="profile.php">Profile</a>
+  <a href="logout.php">LogOut</a>
 </body>
 
 </html>

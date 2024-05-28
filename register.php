@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreyBath</title>
+  <link rel="stylesheet" href="./style/styles.css">
 </head>
 
 <body>
@@ -32,17 +33,19 @@
       }
   }
     ?>
-  <h1>Register</h1>
-  <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>" method="post">
-    <label for="username">Username:</label>
-    <input type="text" name="username" required />
-    <label for="email">Email:</label>
-    <input type="text" name="email" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" required />
-    <button type="submit">Register</button>
-  </form>
-  <p>Already have an account? <a href="login.php">Login</a></p>
+  <div class="container">
+    <h1>Register</h1>
+    <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>" method="post">
+      <label for="username">Username:</label>
+      <input type="text" name="username" required />
+      <label for="email">Email:</label>
+      <input type="text" name="email" required />
+      <label for="password">Password:</label>
+      <input type="password" name="password" required />
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.php">Login</a></p>
+  </div>
 </body>
 
 </html>
