@@ -10,6 +10,7 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
+    photo VARCHAR(255) NOT NULL,
     password_hash char(60) NOT NULL
 );
 

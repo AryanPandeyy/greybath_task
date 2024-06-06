@@ -24,7 +24,8 @@ if (!isset($_SESSION["isUser"])) {
         header("Location: login.php");
     }
     ?>
-  <div class="container" <h1>Profile</h1>
+  <div class="container">
+    <img class="profile" src="<?php echo $userinfo[4];?>"/>
     <h3>Username:
       <?php echo $userinfo[1]; ?>
     </h3>
@@ -34,7 +35,7 @@ if (!isset($_SESSION["isUser"])) {
     <a href="update_username.php">Update Username?</a>
         <a href="update_email.php">Update Email?</a>
     <a href="logout.php">LogOut</a>
-  </div>
-</body>
+    </div>
+    </body>
 
-</html>
+    </html>
