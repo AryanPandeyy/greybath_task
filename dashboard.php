@@ -20,7 +20,7 @@ if (!isset($_SESSION["isUser"])) {
     <?php
     require_once "./db/db.php";
     $result = $conn->query(
-        "SELECT `product_name`, `product_desc`, users.username FROM `Products` JOIN `users` ON `users_id` = users.id;"
+        "SELECT Products.id, `product_name`, `product_desc`, users.username FROM `Products` JOIN `users` ON `users_id` = users.id;"
     );
     if ($result) {
         $products = $result->fetch_all(MYSQLI_ASSOC);
@@ -30,6 +30,8 @@ if (!isset($_SESSION["isUser"])) {
                 echo "<h2>" . htmlspecialchars($product["product_name"]) . "</h2>";
                 echo "<p>" . htmlspecialchars($product["product_desc"]) . "</p>";
                 echo "<p><strong>Created by: </strong>" . htmlspecialchars($product["username"]) . "</p>";
+                echo "<a href='update_product.php?id=".$product["id"]."'>update</a>";
+                echo "<a href='delete_product.php?id=".$product["id"]."'>delete</a>";
                 echo "</div><br>";
             }
         }
